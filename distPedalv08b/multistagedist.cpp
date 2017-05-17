@@ -601,7 +601,7 @@ void AudioEffectMultiStageDist::update(void)
 //       for (uint16_t i=0; i < AUDIO_BLOCK_SAMPLES; i++) {tmp[ii]=block->data[i]; tmp[ii+1]=0.5*(block->data[i]+block->data[i+1]); ii+=2;};  // fast linear 2x interpolator
          static float prev=0;
          tmp[0]=prev;
-         tmp[1]=0.5*(prev+bufin[0]);
+         tmp[1]=0.5*(prev+block->data[0]);
          ii=2;
          for (uint32_t i=0; i < (AUDIO_BLOCK_SAMPLES-1); i++) {tmp[ii]=block->data[i]; tmp[ii+1]=0.5*(block->data[i]+block->data[i+1]); ii+=2;};
          prev=block->data[AUDIO_BLOCK_SAMPLES-1];
