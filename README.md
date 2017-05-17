@@ -4,7 +4,9 @@ Teensy 3.5/3.6 multistage distortion modeling pedal
 ## What is it?
 
 TeensyDist is a DYI Teensy 3-5/3.6 based distortion pedal and firmware that features :
+
 _Hardware:_
+
 * An high impedance input buffer of your choice (mine is a DIY "Klon" type buffer = transparent opamp buffer, see here : http://tagboardeffects.blogspot.ch/2011/04/klon-buffer.html
 ). 
 * An audio codec supported by Teensy Audio Library (mine is a MicroE WM8731 but PJRC Audio board should work as well with a little bit more noise though). Links:  https://shop.mikroe.com/add-on-boards/audio-voice/audio-codec-proto or https://www.pjrc.com/store/teensy3_audio.html
@@ -14,7 +16,9 @@ _Hardware:_
 * One simple switch to trigger preset or editing mode
 * 4x 100k linear rotary potentiometers for master volume, gain, treble and bass controls
 * one rotary encoder + switch for menu navigation and editing (type EC11 or similar).
+
 _Software (in the order of the signal path):_
+
 * a pre-eq & pre-impulse (FIR) filter for tone shaping before distortion
 * a compressor and noise gate (pre distortion)
 * up to 4 distortion stages (single or push-pull tube stage or waveshaper based stage) each with their own pre- and post gains as well as bias, low and high pass filters. All distortion and pre filters are implemented in 32bit floating point for maximum dynamics and distortion can run up to 2x oversampling with Hermite or cubic interpolation of the waveshaping tables on Teensy 3.5 in real time.
