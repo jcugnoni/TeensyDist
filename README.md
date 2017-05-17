@@ -26,6 +26,9 @@ _Software (in the order of the signal path):_
 * optional support for USB audio input  and output to act as a sound card (both mixed with physical inputs and outputs).
 * 4 banks of 4 dual (A/B) presets, for a total of 32 presets stored in Teensy's EEPROM
 
+Here is how it looks like (this is my "dirty" prototype...):
+![Image of TeensyDist pedal proto](https://github.com/jcugnoni/TeensyDist/blob/master/TeensyDistPicture.png)
+
 ## Aim
 TeensyDist is a personnal project that I carried out to discover and research how amp and pedal modeling technology works and is thus provided as is , without any warranty or support. The goal here is to share with you my trials and possibly inspire new developments in the open source / open hardware community. But be carefull, if you are like me, you might spend a LOT of time playing and hacking this thing to get the ultimate sound ;-)
 
@@ -35,8 +38,7 @@ In terms of implementation, TeensyDist is based on  Paul Stoffregen's great Teen
 My implementation uses as much as possible the ARM Cortex M4 DSP instructions and is pretty much optimized. I have tested many variants of the algorithms to choose the best quality/performance ratio. When relevant, the code can be tuned by chosing different options (#define) at compile time.
 
 The current signal flow is shown in the image below:
-[Image of the DSP signal flow]
-(https://github.com/jcugnoni/TeensyDist/blob/master/TeensyDistSignalFlow.png)
+![Image of the DSP signal flow](https://github.com/jcugnoni/TeensyDist/blob/master/TeensyDistSignalFlow.png)
 
 This code provides also new objects for the Teensy/OpenAudio audio libraries:
 * a single stage waveshaper distortion block with variable oversampling and different interpolation types (my first steps, unused in latest version)
