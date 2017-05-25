@@ -48,6 +48,7 @@ This code provides also new objects for the Teensy/OpenAudio audio libraries:
 
 ## Documentation
 The current documentation is sparse and mostly targeted at an experienced audiance but it consists in:
+* A user manual: https://github.com/jcugnoni/TeensyDist/blob/master/TeensyDistmanual.pdf
 * The general flow chart above or in PDF https://github.com/jcugnoni/TeensyDist/blob/master/doc/distPedal08-block-diagram.pdf
 * A detailed table of the Teensy pin connections  in https://github.com/jcugnoni/TeensyDist/blob/master/doc/teensypinMap2.xls
 * a user documentation and some presets/example tones will probably follow... 
