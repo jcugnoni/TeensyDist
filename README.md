@@ -46,6 +46,13 @@ This code provides also new objects for the Teensy/OpenAudio audio libraries:
 * a simple compressor/noise gate block.
 * a very efficient and easy to use floating point IIR equalizer block with automatic calculation of coeficients for high or low pass, peak or shelving filters.
 
+## Library 
+For the sake of simplicity of deployment, TeensyDist firmware is provided with all the code needed to compile it (just need the external libs such a Chipaudette's OpenAudio_Arduino_Library). 
+
+However, for those interested in reusing the code for their own developments, the custom audio processing objects, waveshaping tables and impulse response used in TeensyDist pedal are also available as an Arduino/Teensy library in the Library folder. The library is especially usefull if you want to implement the same modeling methods as TeensyDist on another hardware implementation or with a different user interface. 
+
+If you port this code to another platform, I would appreciate if you share your experience on PJRC Audio forums (https://forum.pjrc.com/forums/8-Audio-Projects)!
+
 ## Documentation
 The current documentation is sparse and mostly targeted at an experienced audiance but it consists in:
 * A user manual: https://github.com/jcugnoni/TeensyDist/blob/master/TeensyDistmanual.pdf
